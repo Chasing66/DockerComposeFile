@@ -1,0 +1,10 @@
+version: "3.8"
+services:
+  alist:
+    image: xhofe/alist
+    container_name: alist
+    restart: unless-stopped
+    ports:
+      - 5244:5244
+    volumes:
+      - /etc/alist:/opt/alist/data
