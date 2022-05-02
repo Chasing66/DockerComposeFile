@@ -1,0 +1,9 @@
+version: "3.8"
+services:
+  freenom:
+    image: luolongfei/freenom
+    container_name: freenom
+    restart: unless-stopped
+    volumes:
+      - $PWD:/conf
+      - $PWD/logs:/app/logs
