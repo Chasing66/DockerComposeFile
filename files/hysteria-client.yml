@@ -1,0 +1,17 @@
+version: "3.9"
+services:
+  hysteria:
+    image: tobyxdd/hysteria
+    container_name: hysteria-client
+    restart: always
+    ports:
+      - "5678:5678"
+      - "5679:5679"
+    volumes:
+      - /root/hysteria:/root
+    command: ["-c", "/root/hysteria.json", "--log-level", "warn"]
+    logging:
+      driver: "local"
+      options:
+        max-size: "1m"
+

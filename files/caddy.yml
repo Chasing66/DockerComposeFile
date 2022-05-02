@@ -1,0 +1,8 @@
+version: "3.8"
+services:
+  caddy:
+    image: caddy:alpine
+    container_name: caddy
+    restart: unless-stopped
+    ports:
+      - "180:80"

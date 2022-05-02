@@ -1,0 +1,19 @@
+version: "3.9"
+services:
+  hysteria:
+    image: tobyxdd/hysteria
+    container_name: hysteria-server
+    restart: always
+    network_mode: "host"
+    volumes:
+      - /root/hysteria:/root
+    command:
+      - "server"
+      - "-c"
+      - "/root/hysteria.json"
+      - "--log-level"
+      - "warn"
+    logging:
+      driver: "local"
+      options:
+        max-size: "1m"

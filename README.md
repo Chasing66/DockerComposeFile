@@ -16,3 +16,9 @@ services:
       - 180:80
 EOF
 ```
+
+### docker-compose up -f
+
+```shell
+docker-compose -f docker-compose.yml up -d
+```
